@@ -10,7 +10,12 @@
         //.wrap为滚动对象的父级
         let scroll=new MyScroll('.wrap',{});
     ```
-
+    - html写法
+    ```html
+        <div class="wrap">
+            <div class="content"></div>
+        </div>
+    ```
 - 方法
 ```js
     //开始滚动之前
