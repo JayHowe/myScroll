@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name='viewport' content='width=device-width,user-scalable=no,initial-scale=1.0'>
+	<style type="text/css">
+		.wrap {
+			width: 300px;
+			height: 300px;
+			border: solid 1px black;
+			overflow: hidden;
+			background-color: #ccc;
+			margin: auto;
+		}
+		.content {
+			width: 800px;
+			height:800px;
+			background: -webkit-linear-gradient(left top,red,green);
+		}
+	</style>
+	<script type="text/javascript" src="./dist/myScroll.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			let scroll=new MyScroll('.wrap',{});
+			scroll.on('beforeScrollStart',function(){
+				console.log('beforeScrollStart');
+			});
+
+			scroll.on('scrollStart',function(){
+				console.log('scrollStart');
+			});
+
+			scroll.on('scroll',function(){
+				console.log('scroll',scroll.x,scroll.y);
+			});
+
+			scroll.on('scrollEnd',function(){
+				console.log('scrollEnd');
+			});
+		}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content"></div>
+	</div>
+</body>
+</html>
