@@ -11,22 +11,22 @@
         let scroll=new MyScroll('.wrap',{});
     ```
 
-    - 方法
-    ```js
-        //开始滚动之前
-        scroll.on('beforeScrollStart',function(){});
+- 方法
+```js
+    //开始滚动之前
+    scroll.on('beforeScrollStart',function(){});
 
-        //开始滚动
-        scroll.on('scrollStart',function(){});
+    //开始滚动
+    scroll.on('scrollStart',function(){});
 
-        //滚动中
-        scroll.on('scroll',function(){
-            //滚动到的x
-            console.log(scroll.x);
-            //滚动到的y
-            console.log(scroll.y);
-        });
+    //滚动中
+    scroll.on('scroll',function(){
+        //滚动到的x
+        console.log(scroll.x);
+        //滚动到的y
+        console.log(scroll.y);
+    });
 
-        //滚动结束
-        scroll.on('scrollEnd',function(){});
-    ```
+    //滚动结束
+    scroll.on('scrollEnd',function(){});
+```
